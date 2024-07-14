@@ -1,0 +1,227 @@
+body {
+    font-family: "Lato", sans-serif;
+    background-color: #2d2525eb;   
+  }
+  
+  .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.5s;
+  }
+  .sidebar button{
+    position: absolute;
+    top:0px;
+    color:rgb(110, 16, 16);
+    background-color: #111;
+    cursor: pointer;
+    padding: 15px 50px;
+    border: none;
+    font-size: 15;
+  }
+  .sidebar button:hover{
+    color: rgb(231, 147, 147);
+    background-color: #5c2a2a ; opacity:0.5 ;
+  }
+  .sidebar a:hover {
+    color: #e66565;
+    background-color: #5c1d1d;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    color: rgb(231, 147, 147);
+    background-color: #5c2a2a ; opacity:0.5 ;
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+    color: bisque;
+  }
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+    position:absolute;
+    left: 900px;
+    top: 270px;
+  }
+  .addbtn{
+    background-color: #c22d2d;
+    padding: 10px 18px;
+    position:absolute;
+    left: 980px;
+    top: 270px;
+  }
+  
+  /* Center the image and position the close button */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+  }
+  
+
+  .container {
+    padding: 16px;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(152, 20, 20); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+    color: #888;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #2d2525eb;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+    color: #888;
+  }
+  .texter{
+    background-color: #1c1717cc;
+    color:#888 ;
+  }
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #888;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: rgb(65, 7, 7);
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+  }
+  
+  
+ select{
+    background: #2d2525eb;
+    color: #c5bdbd;
+    border:rgba(147, 143, 143, 0.5) ;
+    display: block;
+    padding: 7px;
+    position: relative;  
+    bottom: -10px; 
+ }
+ #dueDate{
+  position: relative;
+  left: 140px;
+  bottom: 20px;
+  padding: 7px;
+  border:rgba(147, 143, 143, 0.5) ;
+  background: #2d2525eb;
+  color: #c5bdbd;
+ }
+
+ ul li:nth-child(odd) {
+  background: #a1545456;
+}
+ul li{
+  list-style-type: none;
+}

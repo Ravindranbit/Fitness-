@@ -1,0 +1,730 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+body {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: #ef8b80;
+  font-family: "proxima-nova", "Lato", "Source Sans Pro", "Raleway", Arial,
+    sans-serif;
+
+  -webkit-transition: background 0.75s ease;
+  -moz-transition: background 0.75s ease;
+  -ms-transition: background 0.75s ease;
+  -o-transition: background 0.75s ease;
+  transition: background 0.75s ease;
+}
+
+#background-wrap {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+@keyframes animateBubble {
+  0% {
+    margin-top: 1000px;
+  }
+  100% {
+    margin-top: -100%;
+  }
+}
+
+/* ANIMATIONS */
+
+.x1 {
+  animation: animateBubble 25s linear infinite,
+    sideWays 2s ease-in-out infinite alternate;
+
+  left: -5%;
+  top: 5%;
+
+  transform: scale(0.6);
+}
+
+.x2 {
+  animation: animateBubble 20s linear infinite,
+    sideWays 4s ease-in-out infinite alternate;
+
+  left: 5%;
+  top: 80%;
+
+  transform: scale(0.4);
+}
+
+.x3 {
+  animation: animateBubble 28s linear infinite,
+    sideWays 2s ease-in-out infinite alternate;
+
+  left: 10%;
+  top: 40%;
+
+  transform: scale(0.7);
+}
+
+.x4 {
+  animation: animateBubble 22s linear infinite,
+    sideWays 3s ease-in-out infinite alternate;
+
+  left: 20%;
+  top: 0;
+
+  transform: scale(0.3);
+}
+
+.x5 {
+  animation: animateBubble 29s linear infinite,
+    sideWays 4s ease-in-out infinite alternate;
+
+  left: 30%;
+  top: 50%;
+
+  transform: scale(0.5);
+}
+
+.x6 {
+  animation: animateBubble 21s linear infinite,
+    sideWays 2s ease-in-out infinite alternate;
+
+  left: 50%;
+  top: 0;
+
+  transform: scale(0.8);
+}
+
+.x7 {
+  animation: animateBubble 20s linear infinite,
+    sideWays 2s ease-in-out infinite alternate;
+
+  left: 65%;
+  top: 70%;
+
+  transform: scale(0.4);
+}
+
+.x8 {
+  animation: animateBubble 22s linear infinite,
+    sideWays 3s ease-in-out infinite alternate;
+
+  left: 80%;
+  top: 10%;
+
+  transform: scale(0.3);
+}
+
+.x9 {
+  animation: animateBubble 29s linear infinite,
+    sideWays 4s ease-in-out infinite alternate;
+
+  left: 90%;
+  top: 50%;
+
+  transform: scale(0.6);
+}
+
+.x10 {
+  animation: animateBubble 26s linear infinite,
+    sideWays 2s ease-in-out infinite alternate;
+
+  left: 80%;
+  top: 80%;
+
+  transform: scale(0.3);
+}
+.x11 {
+  animation: animateBubble 10s linear infinite,
+    sideWays 4s ease-in-out infinite alternate;
+
+  left: 10%;
+  top: 80%;
+
+  transform: scale(0.3);
+}
+
+/* OBJECTS */
+
+.bubble {
+  border-radius: 50%;
+
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2),
+    inset 0px 10px 30px 5px rgba(255, 255, 255, 1);
+
+  height: 200px;
+  position: absolute;
+  width: 200px;
+}
+
+.bubble:after {
+
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 0) 70%
+  ); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+  border-radius: 50%;
+
+  box-shadow: inset 0 20px 30px rgba(255, 255, 255, 0.3);
+
+  content: "";
+  height: 180px;
+  left: 10px;
+  position: absolute;
+  width: 180px;
+}
+
+/* Float: left/right */
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+/* Flex center */
+.flex-center,
+div#home-screen div.home-content div.app-icon,
+div#home-screen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Flex */
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+/* Outline none */
+*,
+*:focus,
+*:active {
+  outline: none;
+}
+
+.clearfix:after,
+div#song-options div#song-info:after,
+div#header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.svg path {
+  fill: white;
+}
+
+h3 {
+  cursor: default;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1px;
+  margin: 0 0 15px;
+  text-transform: uppercase;
+}
+
+p {
+  cursor: default;
+}
+p.info-text {
+  color: #b3b3b3;
+  font-size: 10px;
+}
+
+.fa.add {
+  position: relative;
+}
+.fa.add::after {
+  background: #444444;
+  border-radius: 100px;
+  content: "";
+  font-size: 10px;
+  left: 2px;
+  position: absolute;
+  top: -1px;
+  width: 10px;
+  height: 11px;
+}
+
+div#wrapper {
+  z-index: 999;
+}
+
+div#iphone {
+  background: white;
+  border: 4px solid #ececec;
+  border-radius: 30px;
+  max-width: 257px;
+  padding: 10px;
+  -webkit-box-shadow: 0px 10px 25px rgba(51, 51, 51, 0.3);
+  -moz-box-shadow: 0px 10px 25px rgba(51, 51, 51, 0.3);
+  box-shadow: 0px 10px 25px rgba(51, 51, 51, 0.3);
+}
+div#iphone div#camera {
+  cursor: default;
+  margin: 5px auto 20px;
+  width: 100%;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+div#iphone div#camera span {
+  background: #ececec;
+  display: inline-block;
+}
+div#iphone div#camera span:nth-child(1) {
+  border-radius: 7px;
+  height: 7px;
+  margin-right: 7px;
+  position: relative;
+  top: 1px;
+  width: 7px;
+}
+div#iphone div#camera span:nth-child(2) {
+  border-radius: 5px;
+  height: 5px;
+  width: 35px;
+}
+div#iphone div#screen {
+  background: #666666;
+  border: 2px solid #f2f2f2;
+  border-radius: 4px;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  width: 225px;
+  z-index: 1;
+}
+div#iphone div#screen::after {
+  background: gray;
+  content: "";
+  display: block;
+  height: 130%;
+  left: 60%;
+  opacity: 0.15;
+  position: absolute;
+  pointer-events: none;
+  top: -25%;
+  width: 100%;
+  -moz-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  -webkit-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+}
+div#iphone div#home-btn {
+  border: 3px solid #ececec;
+  border-radius: 35px;
+  cursor: pointer;
+  height: 35px;
+  margin: 10px auto 5px;
+  width: 35px;
+}
+
+div#iphone.dark-mode {
+  background: #262626;
+  border: 4px solid #a6a6a6;
+}
+
+div#iphone div#camera span.dark-mode {
+  background: #a6a6a6;
+}
+
+div#iphone div#screen.dark-mode {
+  border: 2px solid #a6a6a6;
+}
+
+div#iphone.dark-mode {
+  background: #262626;
+  border: 4px solid #a6a6a6;
+}
+div#iphone div#camera span.dark-mode {
+  background: #a6a6a6;
+}
+div#iphone div#screen.dark-mode {
+  border: 2px solid #a6a6a6;
+}
+
+div#content-wrap {
+  background: #333;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 5;
+  -webkit-transition: transform 0.25s ease;
+  -moz-transition: transform 0.25s ease;
+  -ms-transition: transform 0.25s ease;
+  -o-transition: transform 0.25s ease;
+  transition: transform 0.25s ease;
+}
+div#content-wrap.minimized {
+  -moz-transform: scale(0);
+  -o-transform: scale(0);
+  -ms-transform: scale(0);
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+div#content-wrap.inactive {
+  -moz-transform: scale(0.85) translate(0, 60%);
+  -o-transform: scale(0.85) translate(0, 60%);
+  -ms-transform: scale(0.85) translate(0, 60%);
+  -webkit-transform: scale(0.85) translate(0, 60%);
+  transform: scale(0.85) translate(0, 60%);
+}
+div#content-wrap.inactive div#overlay {
+  display: block;
+}
+
+div#overlay {
+  cursor: pointer;
+  display: none;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 3;
+}
+
+div#content {
+  padding: 15px;
+  position: relative;
+  z-index: 2;
+}
+
+div#background {
+  background-size: cover;
+  background-position: center;
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -ms-filter: blur(10px);
+  -o-filter: blur(10px);
+  filter: blur(10px);
+  -webkit-transition: background-image 0.25s ease;
+  -moz-transition: background-image 0.25s ease;
+  -ms-transition: background-image 0.25s ease;
+  -o-transition: background-image 0.25s ease;
+  transition: background-image 0.25s ease;
+}
+div#background::before {
+  background: #333;
+  content: "";
+  display: block;
+  height: 100%;
+  opacity: 0.5;
+  position: absolute;
+  width: 100%;
+}
+div#background::after {
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #323232 100%);
+}
+
+div#header {
+  color: white;
+}
+div#header span {
+  cursor: pointer;
+  font-size: 20px;
+}
+div#header span .svg {
+  height: 16px;
+  width: 16px;
+}
+div#header span#menu-btn {
+  float: left;
+}
+div#header span#options-btn {
+  float: right;
+}
+
+div.jcarousel {
+  left: -15px;
+  width: calc(100% + 30px);
+  position: relative;
+  overflow: hidden;
+}
+div.jcarousel ul#songs {
+  width: 20000em;
+  position: relative;
+}
+div.jcarousel ul#songs li.song {
+  float: left;
+  margin: 10px 15px;
+  text-align: center;
+  width: calc(225px - 30px);
+}
+div.jcarousel ul#songs li.song img {
+  width: 92.5%;
+  -webkit-box-shadow: 0px 5px 25px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow: 0px 5px 25px rgba(50, 50, 50, 0.5);
+  box-shadow: 0px 5px 25px rgba(50, 50, 50, 0.5);
+}
+div.jcarousel ul#songs li.song p {
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+div.jcarousel ul#songs li.song p.song-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px 0 5px;
+}
+div.jcarousel ul#songs li.song p.song-artist {
+  color: #b3b3b3;
+  font-size: 12px;
+  margin: 0;
+}
+
+div#controls {
+  color: white;
+  display: table;
+  margin: 10px auto 25px;
+  text-align: center;
+  width: 75%;
+}
+div#controls span {
+  display: table-cell;
+  font-size: 20px;
+  vertical-align: middle;
+}
+div#controls span#play-btn {
+  font-size: 34px;
+}
+div#controls span i {
+  cursor: pointer;
+}
+
+div#sub-controls {
+  color: #999999;
+  cursor: default;
+  font-size: 14px;
+  margin: 15px 0 0;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+div#sub-controls .svg {
+  height: 14px;
+  position: relative;
+  top: 2px;
+  width: 14px;
+}
+div#sub-controls .svg path {
+  fill: #999999;
+}
+div#sub-controls i,
+div#sub-controls .svg {
+  cursor: pointer;
+  margin: 0 15px;
+}
+div#sub-controls i.active,
+div#sub-controls .svg.active {
+  color: #e74c3c;
+}
+
+div#timeline {
+  position: relative;
+  margin: 0 auto;
+  width: 92.5%;
+}
+div#timeline span {
+  color: #b3b3b3;
+  font-size: 7px;
+  position: absolute;
+  top: -10px;
+}
+div#timeline span#current-time {
+  left: 0;
+}
+div#timeline span#total-time {
+  right: 0;
+}
+div#timeline div.slider {
+  background-color: gray;
+  border-radius: 2px;
+  cursor: pointer;
+  height: 2px;
+  position: relative;
+  width: 100%;
+}
+div#timeline div.slider div.progress {
+  background-color: #e74c3c;
+  height: 100%;
+  pointer-events: none;
+  position: absolute;
+  width: 0;
+}
+div#timeline div.slider div.progress div.pin {
+  background-color: white;
+  border-radius: 8px;
+  height: 8px;
+  position: absolute;
+  pointer-events: all;
+  right: -5px;
+  top: -3px;
+  width: 8px;
+  -webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.32);
+  -moz-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.32);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.32);
+  -webkit-transition: transform 0.25s ease;
+  -moz-transition: transform 0.25s ease;
+  -ms-transition: transform 0.25s ease;
+  -o-transition: transform 0.25s ease;
+  transition: transform 0.25s ease;
+}
+div#timeline div.slider div.progress div.pin:active {
+  -moz-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
+}
+
+div#home-screen {
+  background: linear-gradient(to bottom, #4f6f8f, #3d566e);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  visibility: hidden;
+  z-index: 2;
+}
+div#home-screen.active {
+  visibility: visible;
+}
+div#home-screen div.home-content {
+  margin: 15px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+div#home-screen div.home-content h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+div#home-screen div.home-content p {
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 5px 0;
+}
+div#home-screen div.home-content p#made-by a {
+  color: white;
+}
+div#home-screen div.home-content p#icons-by {
+  color: #7796b4;
+  bottom: 15px;
+  font-size: 11px;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+div#home-screen div.home-content p a {
+  color: #98afc6;
+  border-bottom: 1px solid #7796b4;
+  text-decoration: none;
+  padding: 0 1px;
+  -webkit-transition: border-color 0.25s ease, color 0.25s ease;
+  -moz-transition: border-color 0.25s ease, color 0.25s ease;
+  -ms-transition: border-color 0.25s ease, color 0.25s ease;
+  -o-transition: border-color 0.25s ease, color 0.25s ease;
+  transition: border-color 0.25s ease, color 0.25s ease;
+}
+div#home-screen div.home-content p a:hover {
+  color: #b9c9d8;
+  border-color: #b9c9d8;
+}
+div#home-screen div.home-content div.app-icon {
+  cursor: pointer;
+  border-radius: 10px;
+  height: 40px;
+  margin: 30px auto 0;
+  position: relative;
+  width: 40px;
+  background: linear-gradient(to bottom, #e74c3c, #d62c1a);
+}
+div#home-screen div.home-content div.app-icon:hover {
+  background: linear-gradient(to bottom, #e43725, #bf2718);
+}
+div#home-screen div.home-content div.app-icon::after {
+  content: "Music Player";
+  font-size: 10px;
+  position: absolute;
+  top: 45px;
+  white-space: nowrap;
+}
+div#home-screen div.home-content div.app-icon .svg {
+  height: 60%;
+  width: 60%;
+}

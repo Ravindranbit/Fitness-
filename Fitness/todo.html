@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://kit.fontawesome.com/6958ee7ebb.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="todo.css">
+    <script src="jquery-1.6.1.js"></script>
+    <script defer src="todo.js" defer></script>
+    
+</head>
+<body >
+<div class="inbox">
+<div id="mySidebar" class="sidebar">
+  <a href="#" class="closebtn" onclick="closeNav()">×</a>
+  <button onclick="document.getElementById('tasking').style.display='block'" style="width:auto"><i class="fa-solid fa-circle-plus"></i> New Task</button>
+  <a  href="#inbox" ><i class="fa-solid fa-inbox"></i> Inbox</a>
+  <a   href="#Today"><i class="fa-solid fa-calendar-day"></i> Today</a>
+  <a href="#Upcoming"><i class="fa-solid fa-calendar-week"></i>Upcoming</a>
+  <a href="#">Projects</a>
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>  
+  <div id="inbox">
+    <center><h2>INBOX</h2> </center>
+    
+    <ul id="myList" class="list">
+      
+  </ul>
+  </div>
+  <hr>
+  <div id="Today" class="list">
+    <center><h2>Today</h2></center>
+    <ul id="myToday">
+      
+  </ul>
+  </div>
+  <hr>
+  <div id="Upcoming" class="list">
+    <center><h2>Upcoming Events</h2></center>
+    <ul id="myUpcoming">
+      
+  </ul>
+  </div>
+  <hr>
+</div>
+
+
+<div id="tasking" class="modal">
+  <form class="modal-content" id="todo-form">
+    <div class="container" style="border:none;background-color: #413939eb; ">
+      
+      <input class="texter" type="text" placeholder="Taskname"  required style="border: none;" id="task-name" >
+      <input class="texter"  type="text"   style="border: none;" id="task-desc"  placeholder="Enter task description...">        
+       
+      <button type="button" onclick="document.getElementById('tasking').style.display='none'" class="cancelbtn">Cancel</button>
+      <button type="submit" class="addbtn" id="AddUpdateClick"  >Add task</button>
+      
+      <div class="Priority">
+        <select name="prior" id="prior" aria-placeholder="Priority">
+          <option value="high"><i class="fa-solid fa-flag"></i>High Priority</option>
+          <option value="medium">Medium Priority</option>
+          <option value="low">Low Priority</option>
+        </select>  
+      </div>
+
+      <input type="date" id="dueDate" name="due" placeholder="Due Date">
+
+    </div>
+  </form>
+</div>
+<div id="content">
+  
+</div>
+</div>
+  
+
+</body>
+</html>
