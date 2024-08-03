@@ -1,4 +1,4 @@
-#Fitness Website
+Fitness Website
 
   A sleek and modern fitness website designed to showcase various training programs, sessions, trainers, and membership plans. 
 The website is built with a responsive design, ensuring a seamless experience across all devices.
